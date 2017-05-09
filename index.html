@@ -8,5 +8,51 @@
     <title>Movie Tickets!!!</title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="title">Multnomah Cineplex 12</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="ticket-picker">
+            <div class="form-group">
+              <label for="movie">Now Playing</label>
+              <select id="movie-title"class="form-control" name="movie">
+                <option value="a">Prometheus</option>
+                <option value="b">Dorf on Golf</option>
+                <option value="c">Wes Anderson's latest indie masterpiece!</option>
+                <option value="d">Pants</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="time">Showtimes</label>
+              <select id="movie-time" class="form-control" name="time">
+                <option value="a">9:00am</option>
+                <option value="b">11:15am</option>
+                <option value="c">7:00pm</option>
+                <option value="d">9:30pm</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="age">How old are you?</label>
+              <select id="viewer-age" class="form-control" name="age">
+                <option value="a">Under 18</option>
+                <option value="b">18-65</option>
+                <option value="c">65 or Older</option>
+              </select>
+            </div>
+            <button class="btn btn-success" type="submit" name="button">Get Ticket!</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="output">
+            <ul id="ticket-price">
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

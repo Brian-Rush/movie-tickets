@@ -4,8 +4,16 @@ function Ticket(title, time, price) {
   this.ticketPrice = price;
 };
 
+// Ticket.prototype.getPrice = function()
+
+// Ticket.prototype.generateTicket = function() {
+//   return this.movieTitle + " at " + this.showTime;
+// };
+
 //determine price based on variables
-var priceDetermine = function(movie, showtime, age) {
+// Ticket.prototype.
+
+priceDetermine = function(movie, showtime, age) {
   if (age == "a" || showtime == "a" || showtime == "b" || (age == "c" && movie == "old")) {
     var price = 5
   } else if (age == "b" && movie == "old") {
@@ -17,6 +25,9 @@ var priceDetermine = function(movie, showtime, age) {
   }
   return price;
 };
+
+//User Interface Logic
+//document ready shortcut
 $(function() {
   $("form#ticket-picker").submit(function(event) {
     event.preventDefault();
@@ -25,15 +36,14 @@ $(function() {
     var inputtedTime = $("select#movie-time").val();
     var inputtedAge = $("select#viewer-age").val();
     var calculatedPrice = priceDetermine(inputtedTitle, inputtedTime, inputtedAge)
-    var attributeName = $("#movie-title option:selected").attr('name');
-    console.log(attributeName);
+    var selectedMovieName = $("#movie-title option:selected").attr('name');
+    console.log(selectedMovieName);
 
-    // function(x) {
-    //   $( "option[name='Hot Fuzz']" )
-    // };
     var newTicket = new Ticket(attributeName, inputtedTime, calculatedPrice);
     // console.log(calculatedPrice);
-    console.log(newTicket);
-  });
+    // console.log(newTicket);
 
+    // newTicket.priceDetermine()
+
+  });
 });
